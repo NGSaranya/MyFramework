@@ -13,7 +13,7 @@ public class TC001_LoginLogOut extends ProjectSpecificMethods{
 		testCaseName = "Login and LoginOut";
 		testDescription = "Login testCase using DemoSalesManager UserName and LogOut";
 		nodes = "Leads";
-		authors = "Gopinath";
+		authors = "Saranya";
 		category = "Smoke";
 		dataSheetName = "TC001";
 	}
@@ -24,7 +24,7 @@ public class TC001_LoginLogOut extends ProjectSpecificMethods{
 		.enterUserName(uName)
 		.enterPassword(pwd)
 		.clickLogin()
-		.clickLogout();		
+		.clickLogout();
 	}
 
 

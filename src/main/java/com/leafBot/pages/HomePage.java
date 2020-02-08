@@ -21,20 +21,11 @@ public class HomePage extends ProjectSpecificMethods{
 		PageFactory.initElements(driver, this);
 	}		
 
-	@FindBy(how=How.XPATH,using="//h2[text()[contains(.,'Demo')]]")
-	public WebElement eleLoggedName;
-
-	public HomePage verifyLoggedName(String data) {
-		verifyPartialText(eleLoggedName, data);
+	
+	public HomePage verifyTitle() {
+		String title = driver.getTitle();
+		System.out.println(title);
 		return this;
-	}
-
-	@FindBy(how=How.LINK_TEXT,using="CRM/SFA")
-	public WebElement eleCRMSFALink;
-
-	public MyHomePage clickCRMSFA(){
-		click(eleCRMSFALink);
-		return new MyHomePage(driver, node, test);
 	}
 
 	@FindBy(how=How.CLASS_NAME,using="decorativeSubmit")

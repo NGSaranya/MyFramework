@@ -23,17 +23,14 @@ public class LoginPage extends ProjectSpecificMethods{
 		PageFactory.initElements(driver,this);
 	}
 	 
-	@FindBy(how=How.ID,using="username")
+	@FindBy(how=How.ID,using="email")
 	private WebElement eleUserName;	
 	
 	@FindBy(how=How.ID,using="password")
 	private WebElement elePassword;	
 	
-	@FindBy(how=How.CLASS_NAME,using="decorativeSubmit")
+	@FindBy(how=How.ID,using="buttonLogin")
 	private WebElement eleLogin;
-	
-	@FindBy(how=How.ID, using = "errorDiv")
-	private WebElement eleVerifyErrMsg;
 	
 	
 	@Given("Enter the username as (.*)")
@@ -54,16 +51,7 @@ public class LoginPage extends ProjectSpecificMethods{
 		return new HomePage(driver, node, test);		
 	}
 	
-	public LoginPage clickLogInForFailer() {
-		click(eleLogin);
-		return this;		
-	}
 	
-	@Given("Verify the error message (.*)")
-	public LoginPage verifyErrorMsg(String data) {
-		verifyPartialText(eleVerifyErrMsg, data);
-		return this;
-	}
 	
 	
 }
