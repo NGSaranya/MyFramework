@@ -24,11 +24,11 @@ public class HomePage extends ProjectSpecificMethods{
 	
 	public HomePage verifyTitle() {
 		String title = driver.getTitle();
-		System.out.println(title);
+		System.out.println("Page Title:" + title);
 		return this;
 	}
 
-	@FindBy(how=How.CLASS_NAME,using="decorativeSubmit")
+	@FindBy(how=How.LINK_TEXT,using="Log Out")
 	private WebElement eleLogOut;
 	
 	public LoginPage clickLogout() {

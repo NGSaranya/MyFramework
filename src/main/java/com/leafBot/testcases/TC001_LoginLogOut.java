@@ -24,6 +24,7 @@ public class TC001_LoginLogOut extends ProjectSpecificMethods{
 		.enterUserName(uName)
 		.enterPassword(pwd)
 		.clickLogin()
+		.verifyTitle()
 		.clickLogout();
 	}
 
