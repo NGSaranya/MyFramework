@@ -34,7 +34,6 @@ public class HomePage extends ProjectSpecificMethods{
 	public LoginPage clickLogout() {
 		click(eleLogOut);
 		return new LoginPage(driver, node, test);
-
 	}
 	
 	
